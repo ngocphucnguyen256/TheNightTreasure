@@ -15,6 +15,9 @@ html{
     font-size: $body-font-size;
     font-weight: $body-font-weight;
 }
+body{
+    margin-bottom: 10rem;
+}
 
 .container{
     margin:0rem $margin;
@@ -36,9 +39,6 @@ html{
         border: 1px solid $primary-color;
         border-radius: 50%;
     }
-    &__button--icon{
-   
-    }
 }
 img{
     width: 100%;
@@ -51,22 +51,51 @@ h1{
     text-transform: uppercase;
 }
 .title{
+    
     margin-top: 2.125rem;
     display: flex;
     justify-content:space-between;
     &__heading{
         width: 35%;
-        >h1{
+    
+    }
+    &__heading--wrapper{
             margin-top: 5.125rem;
-        }
+    }
+    &__heading--desc{
+        margin-top: 6.5rem;
     }
     &__product{
         display: flex;
+        justify-content:center;
         width: 60%;
     }
+    &__play{
+        padding:1.4rem;
+        border: .0625rem dotted $primary-color;
+        margin-left: 1.625rem;
+        border-radius: 50%;
+    }
+    &__product--desc{
+        margin-top: 11.25rem;
+    }
+    &__product--price{
+        margin-top: .625rem;
+        margin-bottom: 1.3125rem;
+        font-size: 2.375rem;
+    }
+ 
 }
 
+#product__add{
+    display: flex;
+    margin-top: 5.25rem;
+    align-items: center;
+}
+
+
 .button__switch{
+    margin-top: 3.75rem;
     border: 1px solid;
     border-radius: 2rem;
     &--button{
@@ -82,5 +111,47 @@ h1{
 
 .star{
     display: flex;
+    margin-bottom: .5625rem;
+    &__active{
+        color:rgba(231, 147, 49, 1);
+    }
+}
+.big__button{
+    background:  $sub-color;
+    color: $primary-color;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    border-radius: 3.125rem;
+    min-width: 10rem;
+    min-height: 3.625rem;
+    display: inline-block;
+    padding:1.1875rem 1.6875rem;
 }
 
+
+.category{
+    margin-top: 6.5rem;
+    &__container{
+        display: flex;
+        justify-content: center;
+    }
+   &__card{
+       text-transform: uppercase;
+       width: 25%;
+       border: .0625rem solid $sub-color;
+
+   }
+   &__card--inner{
+        margin: 4.375rem;
+   }
+   &__card--number{
+       color: $sub-color;
+       font-size:1rem;
+       margin-bottom: .5rem;
+   }
+   &__card--title{
+       font-size:1.5rem;
+   }
+}

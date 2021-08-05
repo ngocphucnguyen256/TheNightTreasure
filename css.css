@@ -13,6 +13,10 @@ html {
   font-weight: 400;
 }
 
+body {
+  margin-bottom: 10rem;
+}
+
 .container {
   margin: 0rem 10.938rem;
 }
@@ -72,18 +76,53 @@ h1 {
   width: 35%;
 }
 
-.title__heading > h1 {
+.title__heading--wrapper {
   margin-top: 5.125rem;
+}
+
+.title__heading--desc {
+  margin-top: 6.5rem;
 }
 
 .title__product {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 60%;
 }
 
+.title__play {
+  padding: 1.4rem;
+  border: 0.0625rem dotted #fff;
+  margin-left: 1.625rem;
+  border-radius: 50%;
+}
+
+.title__product--desc {
+  margin-top: 11.25rem;
+}
+
+.title__product--price {
+  margin-top: .625rem;
+  margin-bottom: 1.3125rem;
+  font-size: 2.375rem;
+}
+
+#product__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5.25rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .button__switch {
+  margin-top: 3.75rem;
   border: 1px solid;
   border-radius: 2rem;
 }
@@ -102,5 +141,57 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: .5625rem;
+}
+
+.star__active {
+  color: #e79331;
+}
+
+.big__button {
+  background: #b2405d;
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 3.125rem;
+  min-width: 10rem;
+  min-height: 3.625rem;
+  display: inline-block;
+  padding: 1.1875rem 1.6875rem;
+}
+
+.category {
+  margin-top: 6.5rem;
+}
+
+.category__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.category__card {
+  text-transform: uppercase;
+  width: 25%;
+  border: 0.0625rem solid #b2405d;
+}
+
+.category__card--inner {
+  margin: 4.375rem;
+}
+
+.category__card--number {
+  color: #b2405d;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+.category__card--title {
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=css.css.map */
