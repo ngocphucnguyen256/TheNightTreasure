@@ -1,4 +1,5 @@
 $primary-color: #fff;
+$opacity-color: rgba(255, 255, 255, 0.25);
 $sub-color: rgba(178, 64, 93, 1);
 $margin: 10.938rem;
 $body-font-size: 0.813rem;
@@ -15,26 +16,33 @@ html{
     font-size: $body-font-size;
     font-weight: $body-font-weight;
 }
-body{
-    margin-bottom: 10rem;
-}
+
 
 .container{
     margin:0rem $margin;
 }
+//------------------------------------------header--------------------------------
+.menu{
+    text-transform: uppercase;
+
+    &__list{
+        display: flex;
+        justify-content: center;
+    }
+    &__item:not(:last-child){
+        margin-right: 4.688rem;
+    }
+}
+
+
+
 .header{
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
     padding-top: 3.688rem;
     padding-bottom: 3.063rem;
-    &__menu--list{
-        display: flex;
-        justify-content: center;
-    }
-    &__menu--item:not(:last-child){
-        margin-right: 4.688rem;
-    }
+   
     &__button{
         border: 1px solid $primary-color;
         border-radius: 50%;
@@ -205,20 +213,118 @@ h1{
 }
 
 //------------------------------------------services--------------------------------
-
+h2{
+    font-size:3.75rem;
+}
 .services{
     margin-top: 9.375rem;
+    &__header{
+        display: flex;
+        justify-content:space-between;
+        align-items:flex-end;
+        margin-bottom: 7.1875rem;
+    }
+    &__header--left{
+        width:33%;
+    }
+    &__header--title{
+        font-size:1rem;
+        color: $sub-color;
+        letter-spacing:.5rem;
+        margin-bottom:1rem;
+    }
+
     &__card--wrapper{
         display: flex;
-        align-items: center
+        align-items:center;
+    }
+    &__card--wrapper>:first-child{
+        margin-right: 2.1875rem;
     }
     &__card{
         width: 100%;
+   
+        min-height:21.75rem;
     }
     &__card--inner{
         display: flex;
-        align-items: baseline;
+        align-items: center;
+    }
+    &__card--number{
+        margin-right: 2.875rem;
+        font-size: 3.125rem;
+        margin-top:auto;
+    }
+    &__card--img{
+        margin-right: 2.875rem;
+        margin-top: 2.5rem;
+
+    }
+    &__card--img>{
+        min-height: 16rem;
+    }
+    &__card--title{
+        font-size:1.875rem;
+        margin-bottom: 1.25rem;
+        margin-top: 4.875rem;
+    }
+    &__card--desc{
+        font-size: 1rem;
+        margin-bottom: 3rem;
+        color: $opacity-color;
+    }
+    &__card--link{
+        font-size: .875rem;
+        color: $primary-color;
     }
 }
 
 
+//------------------------------------------footer--------------------------------
+
+.footer{
+    margin-top: 6.875rem;
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3.8125rem;
+    }
+    &__email{
+        border-radius: 3.125rem;
+        background: rgba(56, 56, 56, 0.55);
+        min-width: 27.8125rem;
+        min-height: 4.5rem;
+        padding:.3rem;
+        position: relative;
+    }
+    &__email>input{
+        background-color: transparent;
+        color: $primary-color;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        border:none;
+        display: inline-block;
+        padding:.3rem;
+        width:100%;
+        background-color: red;
+    }
+    &__email--input::placeholder{
+        color:rgba(255, 255, 255, 0.55);
+        padding: 1.6875rem 1.875rem;
+        
+    }
+    &__email--button{
+        position: absolute;
+        right: 0;
+    }
+    &__link>:not(:last-child){
+        margin-right: 1.5625rem;
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2.8125rem;
+    }
+}

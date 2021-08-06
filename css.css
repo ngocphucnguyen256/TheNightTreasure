@@ -13,12 +13,25 @@ html {
   font-weight: 400;
 }
 
-body {
-  margin-bottom: 10rem;
-}
-
 .container {
   margin: 0rem 10.938rem;
+}
+
+.menu {
+  text-transform: uppercase;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 4.688rem;
 }
 
 .header {
@@ -31,19 +44,6 @@ body {
   text-transform: uppercase;
   padding-top: 3.688rem;
   padding-bottom: 3.063rem;
-}
-
-.header__menu--list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.header__menu--item:not(:last-child) {
-  margin-right: 4.688rem;
 }
 
 .header__button {
@@ -258,8 +258,36 @@ h1 {
   font-size: .9375rem;
 }
 
+h2 {
+  font-size: 3.75rem;
+}
+
 .services {
   margin-top: 9.375rem;
+}
+
+.services__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 7.1875rem;
+}
+
+.services__header--left {
+  width: 33%;
+}
+
+.services__header--title {
+  font-size: 1rem;
+  color: #b2405d;
+  letter-spacing: .5rem;
+  margin-bottom: 1rem;
 }
 
 .services__card--wrapper {
@@ -271,16 +299,131 @@ h1 {
           align-items: center;
 }
 
+.services__card--wrapper > :first-child {
+  margin-right: 2.1875rem;
+}
+
 .services__card {
   width: 100%;
+  min-height: 21.75rem;
 }
 
 .services__card--inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services__card--number {
+  margin-right: 2.875rem;
+  font-size: 3.125rem;
+  margin-top: auto;
+}
+
+.services__card--img {
+  margin-right: 2.875rem;
+  margin-top: 2.5rem;
+}
+
+.services__card--img > {
+  min-height: 16rem;
+}
+
+.services__card--title {
+  font-size: 1.875rem;
+  margin-bottom: 1.25rem;
+  margin-top: 4.875rem;
+}
+
+.services__card--desc {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.services__card--link {
+  font-size: .875rem;
+  color: #fff;
+}
+
+.footer {
+  margin-top: 6.875rem;
+}
+
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3.8125rem;
+}
+
+.footer__email {
+  border-radius: 3.125rem;
+  background: rgba(56, 56, 56, 0.55);
+  min-width: 27.8125rem;
+  min-height: 4.5rem;
+  padding: .3rem;
+  position: relative;
+}
+
+.footer__email > input {
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  padding: .3rem;
+  width: 100%;
+  background-color: red;
+}
+
+.footer__email--input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.55);
+  padding: 1.6875rem 1.875rem;
+}
+
+.footer__email--input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.55);
+  padding: 1.6875rem 1.875rem;
+}
+
+.footer__email--input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.55);
+  padding: 1.6875rem 1.875rem;
+}
+
+.footer__email--input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+  padding: 1.6875rem 1.875rem;
+}
+
+.footer__email--button {
+  position: absolute;
+  right: 0;
+}
+
+.footer__link > :not(:last-child) {
+  margin-right: 1.5625rem;
+}
+
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.8125rem;
 }
 /*# sourceMappingURL=css.css.map */
