@@ -4,7 +4,7 @@
 }
 
 html {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background: #080203;
@@ -13,8 +13,26 @@ html {
   font-weight: 400;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .container {
   margin: 0rem 10.938rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(#fff, #b2405d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu {
@@ -47,13 +65,20 @@ html {
 }
 
 .header__button {
-  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  padding: .6rem;
 }
 
-img {
-  width: 100%;
-  height: auto;
+.header > div:not(.menu) {
+  width: 20%;
+}
+
+.header__button--wrapper {
+  margin-left: auto;
+  max-width: 2.5rem;
 }
 
 h1 {
@@ -304,8 +329,9 @@ h2 {
 }
 
 .services__card {
-  width: 100%;
-  min-height: 21.75rem;
+  width: 45%;
+  height: 21.75rem;
+  background-color: red;
 }
 
 .services__card--inner {
@@ -329,7 +355,8 @@ h2 {
 }
 
 .services__card--img > {
-  min-height: 16rem;
+  width: 14.375rem;
+  height: 16rem;
 }
 
 .services__card--title {
@@ -347,6 +374,7 @@ h2 {
 .services__card--link {
   font-size: .875rem;
   color: #fff;
+  text-decoration: underline;
 }
 
 .footer {
@@ -369,51 +397,62 @@ h2 {
 .footer__email {
   border-radius: 3.125rem;
   background: rgba(56, 56, 56, 0.55);
-  min-width: 27.8125rem;
-  min-height: 4.5rem;
-  padding: .3rem;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.footer__email > input {
+.footer__email--input {
   background-color: transparent;
   color: #fff;
   outline: none;
-  text-decoration: none;
-  cursor: pointer;
+  font-family: "Inter", sans-serif;
   border: none;
-  display: inline-block;
-  padding: .3rem;
-  width: 100%;
-  background-color: red;
+  color: rgba(255, 255, 255, 0.55);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .footer__email--input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.55);
-  padding: 1.6875rem 1.875rem;
+  margin-left: 1rem;
 }
 
 .footer__email--input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.55);
-  padding: 1.6875rem 1.875rem;
+  margin-left: 1rem;
 }
 
 .footer__email--input::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.55);
-  padding: 1.6875rem 1.875rem;
+  margin-left: 1rem;
 }
 
 .footer__email--input::placeholder {
-  color: rgba(255, 255, 255, 0.55);
-  padding: 1.6875rem 1.875rem;
+  margin-left: 1rem;
 }
 
 .footer__email--button {
-  position: absolute;
-  right: 0;
+  padding: 0rem;
 }
 
-.footer__link > :not(:last-child) {
+.footer__email--arrow {
+  margin-left: 1rem;
+  background: #cb5b78;
+  border-radius: 50%;
+  padding: 0.7rem;
+}
+
+.footer__link--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__link--list > :not(:last-child) {
   margin-right: 1.5625rem;
 }
 

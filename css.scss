@@ -4,24 +4,42 @@ $sub-color: rgba(178, 64, 93, 1);
 $margin: 10.938rem;
 $body-font-size: 0.813rem;
 $body-font-weight: 400;
+$font-family: 'Inter', sans-serif;
+
 
 *{
     box-sizing: border-box;
 }
 html{
-    font-family: 'Inter', sans-serif;
+    font-family: $font-family;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: rgba(8, 2, 3, 1);
     color: $primary-color;
     font-size: $body-font-size;
     font-weight: $body-font-weight;
 }
-
-
+img{
+    width: 100%;
+    height: auto;
+}
+a{
+    color: $primary-color;
+    text-decoration: none;
+}
 .container{
     margin:0rem $margin;
 }
 //------------------------------------------header--------------------------------
+.logo{
+     font-size: 1.5rem;
+        background: -webkit-linear-gradient($primary-color, $sub-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+}
+
+
 .menu{
     text-transform: uppercase;
 
@@ -44,14 +62,22 @@ html{
     padding-bottom: 3.063rem;
    
     &__button{
-        border: 1px solid $primary-color;
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        padding:.6rem;
+    }
+    >div:not(.menu){
+        width: 20%;
+    }
+    &__button--wrapper{
+        margin-left: auto;
+        max-width: 2.5rem;
+
     }
 }
-img{
-    width: 100%;
-    height: auto;
-}
+
 
 h1{
     font-size: 5.625rem;
@@ -242,9 +268,9 @@ h2{
         margin-right: 2.1875rem;
     }
     &__card{
-        width: 100%;
-   
-        min-height:21.75rem;
+        width: 45%;
+        height:21.75rem;
+        background-color: red;
     }
     &__card--inner{
         display: flex;
@@ -261,7 +287,8 @@ h2{
 
     }
     &__card--img>{
-        min-height: 16rem;
+        width:14.375rem;
+        height: 16rem;
     }
     &__card--title{
         font-size:1.875rem;
@@ -276,6 +303,7 @@ h2{
     &__card--link{
         font-size: .875rem;
         color: $primary-color;
+        text-decoration: underline;
     }
 }
 
@@ -293,33 +321,38 @@ h2{
     &__email{
         border-radius: 3.125rem;
         background: rgba(56, 56, 56, 0.55);
-        min-width: 27.8125rem;
-        min-height: 4.5rem;
-        padding:.3rem;
-        position: relative;
+        display: flex;
+        justify-content:space-between;
     }
-    &__email>input{
+    &__email--input{
         background-color: transparent;
         color: $primary-color;
         outline: none;
-        text-decoration: none;
-        cursor: pointer;
+          font-family: $font-family;
         border:none;
-        display: inline-block;
-        padding:.3rem;
-        width:100%;
-        background-color: red;
+        color:rgba(255, 255, 255, 0.55);
+        flex-grow: 1;
+        margin-right: 1rem;
+        margin-left: 1rem;
+
     }
     &__email--input::placeholder{
-        color:rgba(255, 255, 255, 0.55);
-        padding: 1.6875rem 1.875rem;
-        
+        margin-left: 1rem;
     }
     &__email--button{
-        position: absolute;
-        right: 0;
+        padding:0rem;
     }
-    &__link>:not(:last-child){
+    &__email--arrow{
+        margin-left: 1rem;
+        background: rgba(203, 91, 120, 1);
+        border-radius: 50%;
+        padding:0.7rem;
+
+    }
+    &__link--list{
+        display: flex;
+    }
+    &__link--list>:not(:last-child){
         margin-right: 1.5625rem;
     }
     &__bottom{
