@@ -1,11 +1,11 @@
 $primary-color: #fff;
 $opacity-color: rgba(255, 255, 255, 0.25);
 $sub-color: rgba(178, 64, 93, 1);
+$background-color: rgba(8, 2, 3, 1);
 $margin: 10.938rem;
 $body-font-size: 0.813rem;
 $body-font-weight: 400;
 $font-family: 'Inter', sans-serif;
-
 
 *{
     box-sizing: border-box;
@@ -13,7 +13,7 @@ $font-family: 'Inter', sans-serif;
 html{
     font-family: $font-family;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background: rgba(8, 2, 3, 1);
+    background: $background-color;
     color: $primary-color;
     font-size: 100%;
     font-weight: $body-font-weight;
@@ -53,8 +53,14 @@ input{
         display: flex;
         justify-content: center;
     }
+    &__item{
+        padding-bottom:.5rem;
+    }
     &__item:not(:last-child){
         margin-right: 4.688rem;
+    }
+    &__active{
+        border-bottom: .0625rem solid $sub-color;
     }
 }
 
@@ -100,12 +106,27 @@ h1{
     &__heading{
         width: 35%;
         margin-right: 5rem;
+  
     }
     &__heading--wrapper{
             margin-top: 5.125rem;
     }
     &__heading--desc{
+        display: flex;
+        align-items: center;
         margin-top: 6.5rem;
+        margin-right: 4.5rem;
+        >hr{
+            background: rgba(196, 196, 196, 1);
+            width: 20%;
+            margin-right: 1.25rem;
+            border-color:  rgba(196, 196, 196, 1);
+        }
+        >p{
+
+           font-size:1.125rem;
+
+        }
     }
     &__product{
         display: flex;
@@ -113,7 +134,7 @@ h1{
         width: 60%;
     }
     &__play{
-        padding:1.4rem;
+        padding:1.3rem;
         border: .0625rem dotted $primary-color;
         margin-left: 1.625rem;
         border-radius: 50%;
@@ -125,6 +146,9 @@ h1{
         margin-top: .625rem;
         margin-bottom: 1.3125rem;
         font-size: 2.375rem;
+    }
+    &__product--volume{
+        margin-bottom: 3.75rem;
     }
  
 }
@@ -138,8 +162,7 @@ h1{
 
 .button{
     &__switch{
-        margin-top: 3.75rem;
-        border: .0625rem solid $opacity-color;
+        border: .0625rem solid rgba(57, 37, 41, 1);
         border-radius: 1.5rem;
         max-width: 5rem;
         display: flex;
@@ -147,7 +170,7 @@ h1{
         align-items:center;
     }
     &__switch>:first-child{
-        border-right: .0625rem solid $opacity-color;
+        border-right: .0625rem solid rgba(57, 37, 41, 1);
     }
     &__switch--button{
             background: transparent;
@@ -162,11 +185,13 @@ h1{
 
 
 .star{
-    display: flex;
     margin-bottom: .5625rem;
+    color:$opacity-color;
     &__active{
         color:rgba(231, 147, 49, 1);
     }
+
+
 }
 .big__button{
     background:  $sub-color;
@@ -188,13 +213,23 @@ h1{
     &__container{
         display: flex;
         justify-content: center;
+        >:first-child{
+            border: 1.2px solid transparent;
+            border-right: 1.2px solid rgba(178, 64, 93, 1);
+            border-left: none;
+            background:linear-gradient($background-color,$background-color) padding-box,
+            linear-gradient(to right, $background-color, $sub-color) border-box;
+        }
+        >:last-child{
+            border-right: none;
+        }
     }
    &__card{
        text-transform: uppercase;
        width: 25%;
-       border: .0625rem solid $sub-color;
-
+       border: 1px solid rgba(58, 27, 34, 1)
    }
+   
    &__card--inner{
         margin: 4.375rem;
    }
@@ -215,6 +250,9 @@ h1{
 
 .feature{
     margin-top: 9.375rem;
+    &__title{
+        margin-bottom: 5rem;
+    }
     &__heading{
         font-size: 3.5rem;
         margin-bottom:1.875rem ;
@@ -240,39 +278,44 @@ h1{
         border-radius: .9375rem;
         padding:7.5rem 2.875rem;
         position: relative;
-        >div{
+        >.feature__card--inner{
             margin: 7.1875rem 2.875rem;
+            >.feature__card--img::after{
+                content:'';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                background: #DF003D;
+                opacity: 0.5;
+                filter: blur(150px);
         }
-        // ::before{
-        //     position: absolute;
-        //     width: 222px;
-        //     height: 205px;
-        //     left: 54px;
-        //     top: 90px;
-        //     background: #DF003D;
-        //     opacity: 0.4;
-        //     filter: blur(150px);
-        // }
-        // ::after{
-        //     content:'';
-        //     position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        //     left: 0px;
-        //     top: 0px;
-        //     background: #FFFFFF;
-        //     opacity: 0.05;
-        //     border-radius: .9375rem;
+        }
+      
+        ::after{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            background: #FFFFFF;
+            opacity: 0.01;
+            border-radius: .9375rem;
 
-        // }
+        }
 
     }
     &__card{
         padding: 1.5625rem 3.125rem;
         width:100%;
+        text-align: center;
     }
     &__card--img{
         margin-bottom: 2.5rem;
+        position: relative;
     }
     &__card--title{
         margin-bottom: 1rem;
@@ -337,6 +380,11 @@ h2{
         width:14.375rem;
         height: 16rem;
     }
+    &__card--info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     &__card--title{
         font-size:1.875rem;
         margin-bottom: 1.25rem;
@@ -387,7 +435,7 @@ h2{
         margin-left: 1rem;
     }
     &__email--button{
-        padding:0rem;
+        padding:0rem .75rem;
     }
     &__email--arrow{
         margin-left: 1rem;
