@@ -9,7 +9,7 @@ html {
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background: #080203;
   color: #fff;
-  font-size: 0.813rem;
+  font-size: 100%;
   font-weight: 400;
 }
 
@@ -21,6 +21,14 @@ img {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+}
+
+input {
+  font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -89,6 +97,9 @@ h1 {
 
 .title {
   margin-top: 2.125rem;
+}
+
+.title__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,6 +110,7 @@ h1 {
 
 .title__heading {
   width: 35%;
+  margin-right: 5rem;
 }
 
 .title__heading--wrapper {
@@ -148,18 +160,31 @@ h1 {
 
 .button__switch {
   margin-top: 3.75rem;
-  border: 1px solid;
-  border-radius: 2rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.25);
+  border-radius: 1.5rem;
+  max-width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button__switch > :first-child {
+  border-right: 0.0625rem solid rgba(255, 255, 255, 0.25);
 }
 
 .button__switch--button {
   background: transparent;
   outline: none;
-  text-decoration: none;
   cursor: pointer;
   border: none;
-  display: inline-block;
-  padding: .3rem;
+  padding: .5rem 1rem;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .star {
@@ -241,6 +266,10 @@ h1 {
           align-items: center;
 }
 
+.feature__heading--desc {
+  color: rgba(255, 255, 255, 0.25);
+}
+
 .feature__card--wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,9 +285,10 @@ h1 {
 .feature__card--active {
   margin-left: 9.375rem;
   margin-right: 9.375rem;
-  border: 1px solid;
-  border-radius: 1rem;
+  border: 0.0625rem solid #303030;
+  border-radius: .9375rem;
   padding: 7.5rem 2.875rem;
+  position: relative;
 }
 
 .feature__card--active > div {
@@ -281,6 +311,7 @@ h1 {
 
 .feature__card--desc {
   font-size: .9375rem;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 h2 {
@@ -331,16 +362,12 @@ h2 {
 .services__card {
   width: 45%;
   height: 21.75rem;
-  background-color: red;
 }
 
 .services__card--inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .services__card--number {
@@ -354,7 +381,7 @@ h2 {
   margin-top: 2.5rem;
 }
 
-.services__card--img > {
+.services__card--img > img {
   width: 14.375rem;
   height: 16rem;
 }
@@ -464,5 +491,51 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 2.8125rem;
+}
+
+.footer__desc {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1999px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  html {
+    font-size: 30%;
+  }
 }
 /*# sourceMappingURL=css.css.map */

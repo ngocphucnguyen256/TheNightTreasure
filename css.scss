@@ -15,7 +15,7 @@ html{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: rgba(8, 2, 3, 1);
     color: $primary-color;
-    font-size: $body-font-size;
+    font-size: 100%;
     font-weight: $body-font-weight;
 }
 img{
@@ -25,6 +25,12 @@ img{
 a{
     color: $primary-color;
     text-decoration: none;
+}
+button{
+    font-family: $font-family;
+}
+input{
+    font-family: $font-family;
 }
 .container{
     margin:0rem $margin;
@@ -87,11 +93,13 @@ h1{
 .title{
     
     margin-top: 2.125rem;
-    display: flex;
-    justify-content:space-between;
+    &__container{
+        display: flex;
+        justify-content:space-between;
+    }
     &__heading{
         width: 35%;
-    
+        margin-right: 5rem;
     }
     &__heading--wrapper{
             margin-top: 5.125rem;
@@ -128,20 +136,30 @@ h1{
 }
 
 
-.button__switch{
-    margin-top: 3.75rem;
-    border: 1px solid;
-    border-radius: 2rem;
-    &--button{
-        background: transparent;
-        outline: none;
-        text-decoration: none;
-        cursor: pointer;
-        border:none;
-        display: inline-block;
-        padding:.3rem;
+.button{
+    &__switch{
+        margin-top: 3.75rem;
+        border: .0625rem solid $opacity-color;
+        border-radius: 1.5rem;
+        max-width: 5rem;
+        display: flex;
+        justify-content:center;
+        align-items:center;
     }
+    &__switch>:first-child{
+        border-right: .0625rem solid $opacity-color;
+    }
+    &__switch--button{
+            background: transparent;
+            outline: none;
+            cursor: pointer;
+            border:none;
+            padding: .5rem 1rem;
+            color: $opacity-color;
+        
+        }
 }
+
 
 .star{
     display: flex;
@@ -206,6 +224,10 @@ h1{
         justify-content: space-between;
         align-items: center;
     }
+    &__heading--desc{
+        color: $opacity-color;
+
+    }
     &__card--wrapper{
         display: flex;
         align-items: center;
@@ -214,12 +236,35 @@ h1{
     &__card--active{
         margin-left: 9.375rem;
         margin-right: 9.375rem;
-        border: 1px solid;
-        border-radius: 1rem;
+        border: .0625rem solid rgba(48, 48, 48, 1);
+        border-radius: .9375rem;
         padding:7.5rem 2.875rem;
+        position: relative;
         >div{
             margin: 7.1875rem 2.875rem;
         }
+        // ::before{
+        //     position: absolute;
+        //     width: 222px;
+        //     height: 205px;
+        //     left: 54px;
+        //     top: 90px;
+        //     background: #DF003D;
+        //     opacity: 0.4;
+        //     filter: blur(150px);
+        // }
+        // ::after{
+        //     content:'';
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        //     left: 0px;
+        //     top: 0px;
+        //     background: #FFFFFF;
+        //     opacity: 0.05;
+        //     border-radius: .9375rem;
+
+        // }
 
     }
     &__card{
@@ -235,6 +280,8 @@ h1{
     }
     &__card--desc{
         font-size: .9375rem;
+        color: $opacity-color;
+
     }
 }
 
@@ -270,11 +317,11 @@ h2{
     &__card{
         width: 45%;
         height:21.75rem;
-        background-color: red;
+   
     }
     &__card--inner{
         display: flex;
-        align-items: center;
+        
     }
     &__card--number{
         margin-right: 2.875rem;
@@ -286,7 +333,7 @@ h2{
         margin-top: 2.5rem;
 
     }
-    &__card--img>{
+    &__card--img>img{
         width:14.375rem;
         height: 16rem;
     }
@@ -359,5 +406,97 @@ h2{
         display: flex;
         justify-content: space-between;
         margin-bottom: 2.8125rem;
+    }
+    &__desc{
+        color: $opacity-color;
+
+    }
+}
+
+
+
+$res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
+$res_375 : "only screen and (min-width: 375px) and (max-width: 424px)";
+$res_425 : "only screen and (min-width: 425px) and (max-width: 767px)";
+$res_768 : "only screen and (min-width: 768px) and (max-width: 991px)";
+$res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
+$res_1024 : "only screen and (min-width: 1024px) and (max-width: 1999px)";
+$res_1200 : "only screen and (min-width: 1200px)";
+
+@mixin responsive_320() {
+    @media #{$res_320} {
+        @content;
+    }
+}
+@mixin responsive_375() {
+    @media #{$res_375} {
+        @content;
+    }
+}
+@mixin responsive_425() {
+    @media #{$res_425} {
+        @content;
+    }
+}
+@mixin responsive_768() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+@mixin responsive_992() {
+    @media #{$res_992} {
+        @content;
+    }
+}
+@mixin responsive_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}
+@mixin responsive_1200() {
+    @media #{$res_1200} {
+        @content;
+    }
+}
+
+
+
+
+@include responsive_1200{
+    html{
+        font-size:90%;
+    }
+}
+@include responsive_1024{
+        html{
+            font-size:80%;
+        }
+}
+
+@include responsive_992{
+    html{
+        font-size:70%;
+    }
+}
+@include responsive_768{
+    html{
+        font-size:60%;
+    }
+}
+@include responsive_425{
+    html{
+        font-size:50%;
+    }
+}
+@include responsive_375{
+    html{
+    font-size:40%;
+
+    }
+}
+@include responsive_320{
+    html{
+    font-size:30%;
+
     }
 }
