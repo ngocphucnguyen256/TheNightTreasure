@@ -15,8 +15,9 @@ html{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: $background-color;
     color: $primary-color;
-    font-size: 100%;
+    font-size: 16px;
     font-weight: $body-font-weight;
+    scroll-behavior: smooth;
 }
 img{
     width: 100%;
@@ -28,11 +29,14 @@ a{
 }
 button{
     font-family: $font-family;
+    font-size: 1rem;
 }
 input{
     font-family: $font-family;
+    font-size: 1rem;
+
 }
-.container{
+.margin{
     margin:0rem $margin;
 }
 //------------------------------------------header--------------------------------
@@ -47,9 +51,10 @@ input{
 
 
 .menu{
-    text-transform: uppercase;
+  
 
     &__list{
+        text-transform: uppercase;
         display: flex;
         justify-content: center;
     }
@@ -67,33 +72,102 @@ input{
 
 
 .header{
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    padding-top: 3.688rem;
-    padding-bottom: 3.063rem;
-   
-    &__button{
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        background-color: transparent;
-        cursor: pointer;
-        padding:.6rem;
-    }
-    >div:not(.menu){
+
+
+    position:sticky;
+    &__container{
+        margin-left: 5rem;
+        margin-right: $margin;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        text-transform: uppercase;
+        padding-top: 3.688rem;
+        padding-bottom: 3.063rem;
+       top:0;
+       background-color: $background-color;
+       >div:not(.menu){
         width: 20%;
+      }
     }
+
+   
     &__button--wrapper{
         margin-left: auto;
         max-width: 2.5rem;
 
     }
+    &__button{
+        border: 1px solid rgba(75, 40, 40, 0.2);
+        border-radius: 50%;
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        padding:.6rem;
+    }
 }
+
+
+
+
+
+
+//------------------------------------------overlay menu--------------------------------
+.nav{
+    &__container{
+        margin-left: 2rem;
+    }
+    &__menu{
+     display: none;
+    }
+    &__menu--list{
+        display: flex;
+        justify-content:center;
+        flex-direction: column !important;
+    }
+    &__menu--item{
+        margin-top: 2rem;
+    }
+    &__menu--login{
+        margin-top: 10rem;
+    }
+    &__overlay{
+             display:none;
+            position: fixed;
+            width: 100%!important;
+            height: 100%;
+            background-color: $background-color;
+            top: 0;
+            right:0;
+            left: 0;
+            bottom: 0;
+            z-index: 5;
+            opacity: .7;
+    }
+}
+.fixed__menu{
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    background-color: $background-color;
+    top: 0;
+    right:0;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
 
 
 h1{
     font-size: 5.625rem;
-    font: weight 500;
+    font-weight: 500;
     text-transform: uppercase;
 }
 .title{
@@ -186,6 +260,7 @@ h1{
 
 .star{
     margin-bottom: .5625rem;
+    cursor:pointer;
     color:$opacity-color;
     &__active{
         color:rgba(231, 147, 49, 1);
@@ -268,6 +343,8 @@ h1{
     }
     &__card--wrapper{
         display: flex;
+        position: relative;
+        z-index: -5;
         align-items: center;
         justify-content: center;
     }
@@ -287,10 +364,10 @@ h1{
                 height: 100%;
                 left: 0;
                 top: 0;
-                z-index: -1;
+                z-index: -10;
                 background: #DF003D;
                 opacity: 0.5;
-                filter: blur(150px);
+                filter: blur(9.375rem);
         }
         }
       
@@ -299,8 +376,8 @@ h1{
             position: absolute;
             width: 100%;
             height: 100%;
-            left: 0px;
-            top: 0px;
+            left: 0;
+            top: 0;
             background: #FFFFFF;
             opacity: 0.01;
             border-radius: .9375rem;
@@ -364,6 +441,7 @@ h2{
     }
     &__card--inner{
         display: flex;
+        position: relative;
         
     }
     &__card--number{
@@ -374,6 +452,18 @@ h2{
     &__card--img{
         margin-right: 2.875rem;
         margin-top: 2.5rem;
+        ::after{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -10;
+            background: #DF003D;
+            opacity: 0.5;
+            filter: blur(9.375rem);
+    }
 
     }
     &__card--img>img{
@@ -407,6 +497,35 @@ h2{
 
 .footer{
     margin-top: 6.875rem;
+    margin-left: 0rem;
+    background-color: rgba(22, 22, 22, 0.5) ;
+    &__container{
+        padding-top: 4.75rem;
+        margin-left: $margin;
+        margin-right: $margin;
+        position: relative;
+        // :after{
+        //     content:"";
+        //     position: absolute;
+        //     width: 35rem;
+        //     height: 100%;
+        //    margin-left: auto;
+        //    margin-right: auto;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     border-radius: 10rem;
+        //     background: rgba(114, 13, 39, 1);
+        //     opacity: 0.008;
+            
+        // -webkit-filter: blur(5px);
+        // -moz-filter: blur(5px);
+        // -o-filter: blur(5px);
+        // -ms-filter: blur(5px);
+        // filter: blur(5px);
+        //     z-index: -10;
+        // }
+    }
     &__top{
         display: flex;
         align-items: center;
@@ -453,7 +572,7 @@ h2{
     &__bottom{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 2.8125rem;
+        padding-bottom: 2.8125rem;
     }
     &__desc{
         color: $opacity-color;
@@ -462,14 +581,21 @@ h2{
 }
 
 
+$res_0 : "only screen and (max-width: 20em)";
+$res_320 : "only screen and (min-width: 20em) and (max-width: 23.375em)";
+$res_375 : "only screen and (min-width: 23.4375em) and (max-width: 26.5em)";
+$res_425 : "only screen and (min-width: 26.5625em) and (max-width: 47.9375em)";
+$res_768 : "only screen and (min-width: 48em) and (max-width: 62em)";
+$res_992 : "only screen and (min-width: 62em) and (max-width: 64em)";
+$res_1024 : "only screen and (min-width: 64em) and (max-width: 124.9375em)";
+$res_1200 : "only screen and (min-width: 75em)";
 
-$res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
-$res_375 : "only screen and (min-width: 375px) and (max-width: 424px)";
-$res_425 : "only screen and (min-width: 425px) and (max-width: 767px)";
-$res_768 : "only screen and (min-width: 768px) and (max-width: 991px)";
-$res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
-$res_1024 : "only screen and (min-width: 1024px) and (max-width: 1999px)";
-$res_1200 : "only screen and (min-width: 1200px)";
+
+@mixin responsive_0() {
+    @media #{$res_0} {
+        @content;
+    }
+}
 
 @mixin responsive_320() {
     @media #{$res_320} {
@@ -509,11 +635,22 @@ $res_1200 : "only screen and (min-width: 1200px)";
 
 
 
+@media only screen and (max-width:31.25em){
+    .header{
+        position:unset;
+    }
+    .header__menu{
+        display:none;
+    }
+    .footer__menu{
+        display:none;
+    }
+}
+
+
 
 @include responsive_1200{
-    html{
-        font-size:90%;
-    }
+
 }
 @include responsive_1024{
         html{
@@ -528,7 +665,7 @@ $res_1200 : "only screen and (min-width: 1200px)";
 }
 @include responsive_768{
     html{
-        font-size:60%;
+        font-size:50%;
     }
 }
 @include responsive_425{
@@ -538,13 +675,19 @@ $res_1200 : "only screen and (min-width: 1200px)";
 }
 @include responsive_375{
     html{
-    font-size:40%;
+    font-size:20%;
 
     }
 }
 @include responsive_320{
     html{
-    font-size:30%;
+    font-size:10%;
 
+    }
+}
+
+@include responsive_0{
+    html{
+        font-size:10%;
     }
 }

@@ -5,36 +5,54 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Night Treasure</title>
-
+    <link rel="shortcut icon" href="./img/title__img.png"/>
     <link rel="stylesheet" href="reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://kit.fontawesome.com/5b02a440d3.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <section class="header">
-            <div class="header__logo logo"><a href="#">The Night Treasure</a></div>
-            <div class="header__menu  menu">
-                <ul class="header__menu--list menu__list">
-                    <li class="header__menu--item menu__item menu__active"><a href="#">about</a></li>
-                    <li class="header__menu--item menu__item"><a href="#">ingredients</a></li>
-                    <li class="header__menu--item menu__item"><a href="#">product</a></li>
-                    <li class="header__menu--item menu__item"><a href="#">contact</a></li>
-                </ul>
-            </div>
-            <div class="header__button--container">
-                <div class="header__button--wrapper">
-                    <button class="header__button"> <img class="header__button--icon" src="./img/header__button--icon.png" /></button>
+    <div class="body__container">
+        <section class="header" id="header">
+            <div class="header__container">
+                <div class="header__logo logo"><a href="#">The Night Treasure</a></div>
+                <div class="header__menu  menu">
+                    <ul class="header__menu--list menu__list">
+                        <li class="header__menu--item menu__item menu__active"><a href="#about">about</a></li>
+                        <li class="header__menu--item menu__item"><a href="#ingredients">ingredients</a></li>
+                        <li class="header__menu--item menu__item"><a href="#product">product</a></li>
+                        <li class="header__menu--item menu__item"><a href="#contact">contact</a></li>
+                    </ul>
                 </div>
+                <div class="header__button--container">
+                    <div class="header__button--wrapper">
+                        <button class="header__button" id="nav-button"><i class="fas fa-equals"></i></button>
+                    </div>
+                    <div class="nav__menu  menu">
+                        <div class="nav__container">
+                            <ul class="nav__menu--list menu__list">
+                                <li class="nav__menu--item menu__item menu__active"><a href="#about">about</a></li>
+                                <li class="nav__menu--item menu__item"><a href="#ingredients">ingredients</a></li>
+                                <li class="nav__menu--item menu__item"><a href="#product">product</a></li>
+                                <li class="nav__menu--item menu__item"><a href="#contact">contact</a></li>
+                            </ul>
+                            <div class="nav__menu--login">
+                                <button class="big__button">Login</button>
+                                <button class="big__button">Sign up</button>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="nav__overlay"></div>
             </div>
         </section>
-        <section class="title">
-            <div class="title__container">
+        <section class="title" id="about">
+            <div class="title__container margin">
                 <div class="title__heading">
                     <div class="title__heading--wrapper">
                         <h1>the<br>night<br>treasure</h1>
@@ -78,8 +96,8 @@
                 </div>
             </div>
         </section>
-        <section class="category">
-            <div class="category__container">
+        <section class="category" id="category">
+            <div class="category__container margin">
                 <div class="category__card">
                     <div class="category__card--inner">
                         <p class="category__card--number">01</p>
@@ -106,53 +124,55 @@
                 </div>
             </div>
         </section>
-        <section class="feature">
-            <div class="feature__title">
-                <p class="feature__heading">A Vanila Phrodisiac</p>
-                <div class="feature__heading--under">
-                    <p class="feature__heading--desc">Financial institutions provide financial services for members and as middlemen between the savers and borrowers.</p>
-                    <div class="button__switch button">
-                        <div class="button__wrapper">
-                        <button class="button__switch--button"><i class="fas fa-angle-left"></i></button>
-                        </div>
-                        <div class="button__wrapper">
-                        <button class="button__switch--button"> <i class="fas fa-angle-right"></i></button>
+        <section class="feature" id="ingredients">
+            <div class="feature__container margin">
+                <div class="feature__title">
+                    <p class="feature__heading">A Vanila Phrodisiac</p>
+                    <div class="feature__heading--under">
+                        <p class="feature__heading--desc">Financial institutions provide financial services for members and as middlemen between the savers and borrowers.</p>
+                        <div class="button__switch button">
+                            <div class="button__wrapper">
+                            <button class="button__switch--button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <div class="button__wrapper">
+                            <button class="button__switch--button"> <i class="fas fa-angle-right"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="feature__card--wrapper">
-                <div class="feature__card">
-                    <div class="feature__card--inner">
-                        <div class="feature__card--img">
-                            <img src="./img/feature__1.png" alt="feature__card"/>
+                <div class="feature__card--wrapper">
+                    <div class="feature__card">
+                        <div class="feature__card--inner">
+                            <div class="feature__card--img">
+                                <img src="./img/feature__1.png" alt="feature__card"/>
+                            </div>
+                            <p class="feature__card--title">ROSE DAMASCENA</p>
+                            <p class="feature__card--desc">the rose of Castile, is a rose hybrid, </p>
                         </div>
-                        <p class="feature__card--title">ROSE DAMASCENA</p>
-                        <p class="feature__card--desc">the rose of Castile, is a rose hybrid, </p>
                     </div>
-                </div>
-                <div class="feature__card feature__card--active">
-                    <div class="feature__card--inner">
-                        <div class="feature__card--img">
-                            <img src="./img/feature__2.png" alt="feature__card"/>
+                    <div class="feature__card feature__card--active">
+                        <div class="feature__card--inner">
+                            <div class="feature__card--img blur">
+                                <img src="./img/feature__2.png" alt="feature__card"/>
+                            </div>
+                            <p class="feature__card--title">ROSE DAMASCENA</p>
+                            <p class="feature__card--desc">more commonly known as the Damask rose.</p>
                         </div>
-                        <p class="feature__card--title">ROSE DAMASCENA</p>
-                        <p class="feature__card--desc">more commonly known as the Damask rose.</p>
                     </div>
-                </div>
-                <div class="feature__card">
-                    <div class="feature__card--inner">
-                        <div class="feature__card--img">
-                            <img src="./img/feature__3.png" alt="feature__card"/>
+                    <div class="feature__card">
+                        <div class="feature__card--inner">
+                            <div class="feature__card--img">
+                                <img src="./img/feature__3.png" alt="feature__card"/>
+                            </div>
+                            <p class="feature__card--title">VANILLE</p>
+                            <p class="feature__card--desc">Grown in Papua New Guinea from Tahitientis variety. </p>
                         </div>
-                        <p class="feature__card--title">VANILLE</p>
-                        <p class="feature__card--desc">Grown in Papua New Guinea from Tahitientis variety. </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="services">
-            <div class="services__container">
+        <section class="services" id="product">
+            <div class="services__container margin">
                 <div class="services__header">
                     <div class="services__header--left">
                         <p class="services__header--title">SIMILAR PRODUCTS</p>
@@ -197,33 +217,35 @@
                 </div>
             </div>
         </section>
-        <section class="footer">
-            <div class="footer__inner">
-                <div class="footer__top">
-                    <p class="footer__logo logo"><a href="#">The Night Treasure</a></p>
-                    <div class="footer__email">
-                        <input class="footer__email--input" type="email" placeholder="Your business email..."/>
-                        <button class="footer__email--button big__button">Get started<i class="fas fa-arrow-right footer__email--arrow"></i></button>
+        <section class="footer" id="contact">
+            <div class="footer__container">
+                <div class="footer__inner">
+                    <div class="footer__top">
+                        <p class="footer__logo logo"><a href="#">The Night Treasure</a></p>
+                        <div class="footer__email">
+                            <input class="footer__email--input" type="email" placeholder="Your business email..."/>
+                            <button class="footer__email--button big__button">Get started<i class="fas fa-arrow-right footer__email--arrow"></i></button>
+                        </div>
+                        <div class="footer__link">
+                            <ul class="footer__link--list">
+                                <li  class="footer__link--item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li  class="footer__link--item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li  class="footer__link--item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="footer__link">
-                        <ul class="footer__link--list">
-                            <li  class="footer__link--item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li  class="footer__link--item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li  class="footer__link--item"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        </ul>
+                    <div class="footer__bottom">
+                        <p class="footer__desc">Copyright © 2020.Besnik creative</p>
+                        <div class="footer__menu menu">
+                            <ul class="footer__menu--list menu__list">
+                                <li class="footer__menu--item menu__item"><a href="#about">about</a></li>
+                                <li class="footer__menu--item menu__item"><a href="#ingredients">ingredients</a></li>
+                                <li class="footer__menu--item menu__item"><a href="#product">product</a></li>
+                                <li class="footer__menu--item menu__item"><a href="#contact">contact</a></li>
+                            </ul>
+                        </div>
+                        <p class="footer__desc">Designed by Besnik</p>
                     </div>
-                </div>
-                <div class="footer__bottom">
-                    <p class="footer__desc">Copyright © 2020.Besnik creative</p>
-                    <div class="footer__menu menu">
-                        <ul class="footer__menu--list menu__list">
-                            <li class="footer__menu--item menu__item"><a href="#">about</a></li>
-                            <li class="footer__menu--item menu__item"><a href="#">ingredients</a></li>
-                            <li class="footer__menu--item menu__item"><a href="#">product</a></li>
-                            <li class="footer__menu--item menu__item"><a href="#">contact</a></li>
-                        </ul>
-                    </div>
-                    <p class="footer__desc">Designed by Besnik</p>
                 </div>
             </div>
         </section>
