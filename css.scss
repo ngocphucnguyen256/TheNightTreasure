@@ -648,7 +648,6 @@ $res_1200 : "only screen and (min-width: 75em)";
 }
 
 
-
 @include responsive_1200{
 
 }
@@ -670,7 +669,7 @@ $res_1200 : "only screen and (min-width: 75em)";
 }
 @include responsive_425{
     html{
-        font-size:50%;
+        font-size:30%;
     }
 }
 @include responsive_375{
