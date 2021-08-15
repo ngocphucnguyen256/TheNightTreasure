@@ -46,6 +46,11 @@ input {
   -webkit-text-fill-color: transparent;
 }
 
+.menu {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .menu__list {
   text-transform: uppercase;
   display: -webkit-box;
@@ -68,9 +73,16 @@ input {
   border-bottom: 0.0625rem solid #b2405d;
 }
 
-.header {
-  position: -webkit-sticky;
-  position: sticky;
+.menu__line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 1rem;
+  background-color: #b2405d;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .header__container {
@@ -319,16 +331,23 @@ h1 {
           justify-content: center;
 }
 
-.category__container > :first-child {
+.category__container > :hover {
   border: 1.2px solid transparent;
   border-right: 1.2px solid #b2405d;
-  border-left: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#080203), to(#080203)) padding-box, -webkit-gradient(linear, left top, right top, from(#080203), to(#b2405d)) border-box;
   background: linear-gradient(#080203, #080203) padding-box, linear-gradient(to right, #080203, #b2405d) border-box;
 }
 
+.category__container > :first-child {
+  border-left: none;
+}
+
 .category__container > :last-child {
   border-right: none;
+}
+
+.category__container > :last-child:hover {
+  border-right: 1.2px solid #b2405d;
 }
 
 .category__card {
@@ -674,6 +693,13 @@ h2 {
   color: rgba(255, 255, 255, 0.25);
 }
 
+.gotop {
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  font-size: 2rem;
+}
+
 @media only screen and (max-width: 31.25em) {
   .header {
     position: unset;
@@ -710,13 +736,13 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 23.4375em) and (max-width: 26.5em) {
+@media only screen and (min-width: 23.4em) and (max-width: 26.5em) {
   html {
     font-size: 20%;
   }
 }
 
-@media only screen and (min-width: 20em) and (max-width: 23.375em) {
+@media only screen and (min-width: 20em) and (max-width: 23.49em) {
   html {
     font-size: 10%;
   }

@@ -51,7 +51,7 @@ input{
 
 
 .menu{
-  
+  position: sticky;
 
     &__list{
         text-transform: uppercase;
@@ -67,14 +67,22 @@ input{
     &__active{
         border-bottom: .0625rem solid $sub-color;
     }
+    &__line{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        border-radius:1rem;
+        background-color:$sub-color;
+        transition: all 0.2s ease;
+    }
 }
 
 
 
 .header{
 
-
-    position:sticky;
     &__container{
         margin-left: 5rem;
         margin-right: $margin;
@@ -288,21 +296,33 @@ h1{
     &__container{
         display: flex;
         justify-content: center;
-        >:first-child{
+        >:hover{
             border: 1.2px solid transparent;
             border-right: 1.2px solid rgba(178, 64, 93, 1);
-            border-left: none;
             background:linear-gradient($background-color,$background-color) padding-box,
             linear-gradient(to right, $background-color, $sub-color) border-box;
+   }
+        >:first-child{
+            border-left: none;
+        
         }
         >:last-child{
             border-right: none;
+
+            
+        }
+        >:last-child:hover{
+
+            border-right: 1.2px solid rgba(178, 64, 93, 1);
+
+
         }
     }
    &__card{
        text-transform: uppercase;
        width: 25%;
-       border: 1px solid rgba(58, 27, 34, 1)
+       border: 1px solid rgba(58, 27, 34, 1);
+      
    }
    
    &__card--inner{
@@ -580,16 +600,25 @@ h2{
     }
 }
 
+.gotop{
+    position: fixed;
+    bottom:5rem;
+    right:5rem;
+    font-size:2rem;
+}
+
+
+
+
 
 $res_0 : "only screen and (max-width: 20em)";
-$res_320 : "only screen and (min-width: 20em) and (max-width: 23.375em)";
-$res_375 : "only screen and (min-width: 23.4375em) and (max-width: 26.5em)";
+$res_320 : "only screen and (min-width: 20em) and (max-width: 23.49em)";
+$res_375 : "only screen and (min-width: 23.4em) and (max-width: 26.5em)";
 $res_425 : "only screen and (min-width: 26.5625em) and (max-width: 47.9375em)";
 $res_768 : "only screen and (min-width: 48em) and (max-width: 62em)";
 $res_992 : "only screen and (min-width: 62em) and (max-width: 64em)";
 $res_1024 : "only screen and (min-width: 64em) and (max-width: 124.9375em)";
 $res_1200 : "only screen and (min-width: 75em)";
-
 
 @mixin responsive_0() {
     @media #{$res_0} {
