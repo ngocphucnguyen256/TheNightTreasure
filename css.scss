@@ -51,7 +51,7 @@ input{
 
 
 .menu{
-  position: sticky;
+    position: relative;
 
     &__list{
         text-transform: uppercase;
@@ -82,7 +82,9 @@ input{
 
 
 .header{
-
+    position: -webkit-sticky;
+    position: sticky;
+    top: -2rem;
     &__container{
         margin-left: 5rem;
         margin-right: $margin;
@@ -91,7 +93,7 @@ input{
         align-items:center;
         text-transform: uppercase;
         padding-top: 3.688rem;
-        padding-bottom: 3.063rem;
+        padding-bottom: 1.5rem;
        top:0;
        background-color: $background-color;
        >div:not(.menu){
@@ -125,8 +127,8 @@ input{
     &__container{
         margin-left: 2rem;
     }
-    &__menu{
-     display: none;
+    &__button--wrapper{
+        transform: translateX(-1%);
     }
     &__menu--list{
         display: flex;
@@ -138,6 +140,12 @@ input{
     }
     &__menu--login{
         margin-top: 10rem;
+    }
+    &__hidden{
+        display: none;
+        width: 0;
+         transition: all 0.2s ease;
+
     }
     &__overlay{
              display:none;
@@ -180,7 +188,7 @@ h1{
 }
 .title{
     
-    margin-top: 2.125rem;
+    margin-top: 3.625rem;
     &__container{
         display: flex;
         justify-content:space-between;

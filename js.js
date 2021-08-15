@@ -3,10 +3,30 @@ $( document ).ready(function() {
 
     
     $("#nav-button").click(function(){
-        $(".nav__menu").toggle();
+       $(".header__menu").toggle();
+      $(".header__button--wrapper").toggle();
+
+
+        $(".nav__hidden").toggle();
+        $(".nav__hidden").toggleClass("fixed__menu")
         $(".nav__overlay").toggle();
-        $(".header__button--container").toggleClass("fixed__menu")
       });
+
+      $("#nav__hidden--button").click(function(){
+        $(".header__menu").toggle();
+        $(".header__button--wrapper").toggle();
+        $(".nav__hidden").toggle();
+        $(".nav__hidden").toggleClass("fixed__menu")
+        $(".nav__overlay").toggle();
+      })
+      $(".nav__overlay").click(function(){
+        $(".header__menu").toggle();
+        $(".header__button--wrapper").toggle();
+        $(".nav__hidden").toggle();
+        $(".nav__hidden").toggleClass("fixed__menu")
+        $(".nav__overlay").toggle();
+      })
+
 
       $(window).scroll(function(){
         if ($(this).scrollTop() > 100) {

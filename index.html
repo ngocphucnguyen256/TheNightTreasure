@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="body__container">
+    <div class="body__container" id="top">
         <section class="header" id="header">
             <div class="header__container">
                 <div class="header__logo logo"><a href="#">The Night Treasure</a></div>
@@ -34,25 +34,30 @@
                     <div class="header__button--wrapper">
                         <button class="header__button" id="nav-button"><i class="fas fa-equals"></i></button>
                     </div>
-                    <div class="nav__menu  menu">
-                        <div class="nav__container">
-                            <ul class="nav__menu--list menu__list">
-                                <li class="nav__menu--item menu__item menu__active"><a href="#about">about</a></li>
-                                <li class="nav__menu--item menu__item"><a href="#ingredients">ingredients</a></li>
-                                <li class="nav__menu--item menu__item"><a href="#product">product</a></li>
-                                <li class="nav__menu--item menu__item"><a href="#contact">contact</a></li>
-                            </ul>
-                            <div class="nav__menu--login">
-                                <button class="big__button">Login</button>
-                                <button class="big__button">Sign up</button>
+                    <div class="nav__hidden">
+                        <div class="nav__button--wrapper">
+                            <button class="nav__hidden--button header__button" id="nav__hidden--button"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="nav__menu  menu">
+                            <div class="nav__container">
+                                <ul class="nav__menu--list menu__list">
+                                    <li class="nav__menu--item menu__item menu__active"><a href="#about">about</a></li>
+                                    <li class="nav__menu--item menu__item"><a href="#ingredients">ingredients</a></li>
+                                    <li class="nav__menu--item menu__item"><a href="#product">product</a></li>
+                                    <li class="nav__menu--item menu__item"><a href="#contact">contact</a></li>
+                                </ul>
+                                <div class="nav__menu--login">
+                                    <button class="big__button">Login</button>
+                                    <button class="big__button">Sign up</button>
+                                </div>
                             </div>
-                        </div>
-                        </div>
+                            </div>
+                    </div>
                 </div>
                 <div class="nav__overlay"></div>
             </div>
         </section>
-        <section class="title" id="about">
+        <section class="title" id="about    ">
             <div class="title__container margin">
                 <div class="title__heading">
                     <div class="title__heading--wrapper">
@@ -250,7 +255,7 @@
                 </div>
             </div>
             <div class="gotop">
-                <a href="#header" class="top"><i class="fas fa-arrow-up"></i></a>
+                <a href="#top" class="top"><i class="fas fa-arrow-up"></i></a>
             </div>
         </section>
     </div>
