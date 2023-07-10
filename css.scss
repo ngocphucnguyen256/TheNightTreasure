@@ -622,8 +622,8 @@ h2{
 $res_0 : "only screen and (max-width: 20em)";
 $res_320 : "only screen and (min-width: 20em) and (max-width: 23.49em)";
 $res_375 : "only screen and (min-width: 23.4em) and (max-width: 26.5em)";
-$res_425 : "only screen and (min-width: 26.5625em) and (max-width: 47.9375em)";
-$res_768 : "only screen and (min-width: 48em) and (max-width: 62em)";
+$res_425 : "only screen and (max-width: 47.9375em)";
+$res_768 : "only screen and (max-width: 62em)";
 $res_992 : "only screen and (min-width: 62em) and (max-width: 64em)";
 $res_1024 : "only screen and (min-width: 64em) and (max-width: 124.9375em)";
 $res_1200 : "only screen and (min-width: 75em)";
@@ -689,41 +689,174 @@ $res_1200 : "only screen and (min-width: 75em)";
 
 }
 @include responsive_1024{
-        html{
-            font-size:80%;
-        }
+    html{
+        font-size:80%;
+    }
 }
 
 @include responsive_992{
-    html{
-        font-size:70%;
+    .margin {
+        margin: 0rem 6rem;
     }
 }
 @include responsive_768{
-    html{
-        font-size:50%;
+    .margin {
+        margin: 0rem 1rem;
     }
+    .title__container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .category__container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0rem 3rem;
+        .category__card{
+            width: 100%;
+            margin-bottom: 2rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            .category__card--inner{
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+    .feature__card--wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0rem 3rem;
+    }
+    .feature__card{
+        width: 100%;
+        margin-bottom: 2rem;
+        padding: 4rem;
+        text-align: center;
+        .feature__card--inner{
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .services__card--wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0rem 3rem;
+    }
+    .services__card{
+        width: 100%;
+    }
+    .footer__container{
+        margin-left: 1rem;
+       margin-right: 1rem;
+       .footer__top{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            margin: 0rem 2rem;
+            .footer__logo{
+                margin-bottom: 1rem;
+            }
+            .footer__email{
+                margin-bottom: 1rem;
+            }
+       }
+    }
+    .header__menu{
+        display:none !important;
+    }
+    .header__container{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .gotop{
+        bottom: 2rem;
+        right: 2rem;
+    }
+    .nav__menu--login{
+        .big__button{
+            margin-bottom: 2rem;
+        }
+    }
+
+
 }
 @include responsive_425{
-    html{
-        font-size:30%;
+    .services__card--inner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .services__card--wrapper{
+        margin: 0rem 1rem;
+        .services__card{
+            margin-right: 0;
+            height: 100%;
+        }
+        .services__card--number{
+            margin-right: 0;
+        }
+    }
+    .footer__email{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: none;
+        background: none;
+        .footer__email--input{
+            margin-bottom: 2rem;
+        }
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .title__product{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .title__product--desc{
+        margin-top: 3rem;
+    }
+    .title__heading{
+        width: 100%;
+        margin: 1rem;
+    }
+    .title{
+        margin-top: 1rem;
+    }
+    .header__container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .feature__heading{
+        font-size: 2.5rem;
+    }
+    .services__header--heading{
+        font-size: 2.5rem;
+    }
+    .fixed__menu{
+        width: 50%;
+    }
+    .nav__container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .services__header--left{
+        width: 100%;
     }
 }
 @include responsive_375{
-    html{
-    font-size:20%;
 
-    }
 }
 @include responsive_320{
-    html{
-    font-size:10%;
-
-    }
+ 
 }
 
 @include responsive_0{
-    html{
-        font-size:10%;
-    }
+
 }
